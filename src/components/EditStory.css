@@ -1,0 +1,126 @@
+/* Main container for the Edit Story form */
+.edit-story-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+  }
+  
+  /* Heading */
+  .edit-story-container h2 {
+    color: #45a049; /* Purple color */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Close button */
+  .edit-story-container .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #f44336;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .edit-story-container .close-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+  }
+  
+  /* Form group for input fields */
+  .edit-story-container .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Form labels */
+  .edit-story-container label {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Input fields */
+  .edit-story-container input,
+  .edit-story-container textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  .edit-story-container input:focus,
+  .edit-story-container textarea:focus {
+    border-color: #45a049;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .edit-story-container button {
+    background-color: #45a049;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+  }
+  
+  .edit-story-container button:hover {
+    background-color: #52bb57;
+  }
+  
+  .edit-story-container .delete-btn {
+    background-color: #f44336;
+  }
+  
+  .edit-story-container .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Image preview */
+  .image-preview {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .back-btn {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .back-btn:hover {
+    background-color: #45a049;
+  }
+  
+  

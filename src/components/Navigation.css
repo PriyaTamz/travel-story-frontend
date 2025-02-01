@@ -1,0 +1,72 @@
+/* General reset for the navigation bar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3ffe4;
+  padding: 15px 30px;
+  position: fixed; /* Makes the navbar stay at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+
+.title {
+  font-size: 24px;
+  color: #45a049;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: cursive;
+}
+
+.logout-btn {
+  background-color: #45a049;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #5ccf62;
+  transform: scale(1.05);
+}
+
+.logout-btn:focus {
+  outline: none;
+}
+
+.navbar button:active {
+  transform: scale(0.98);
+}
+
+/* Adding responsiveness for mobile view */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .logout-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Add space to body to prevent overlap with fixed navbar */
+body {
+  padding-top: 60px; /* Adjust this value based on navbar height */
+}

@@ -1,0 +1,169 @@
+.dashboard-container {
+  position: relative;
+  padding-left: 30px;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-header {
+  text-align: center;
+  color: #45a049; /* Violet/Purple color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.add-story-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-story-btn:hover {
+  background-color: #58c55d;
+}
+
+.calendar-container {
+  position: fixed; /* Use fixed so it stays in place while scrolling */
+  top: 20%;
+  right: 1%;
+  padding: 20px;
+  border-radius: 12px;
+  z-index: 1000; /* Ensures it's above other elements */
+  max-width: 300px; /* Restrict the width */
+  width: 100%;
+  overflow: hidden; /* Prevents content overflow */
+  display: flex;
+  justify-content: center;
+}
+
+.react-calendar {
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #ddd; /* Light border for the calendar */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for the calendar */
+}
+
+.react-calendar__tile {
+  border-radius: 8px;
+}
+
+.react-calendar__tile--active {
+  background-color: #45a049; /* Active day background color */
+  color: white;
+}
+
+/* Styling for the month navigation and header */
+.react-calendar__navigation {
+  color: white; /* White text for the month */
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.react-calendar__month-view__weekdays {
+  color: #333; /* Dark color for weekday names */
+  font-weight: bold;
+}
+
+.react-calendar__navigation button {
+  border: none;
+  color: #333;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: #ddd; /* Disabled state for buttons */
+  cursor: not-allowed;
+}
+
+.stories-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.story-card {
+  width: 100%;
+  max-width: 20%; /* This will ensure 3 cards per row on larger screens */
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  border-radius: 10px; /* Adds border radius to the card */
+  overflow: hidden;
+}
+
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.story-card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+
+.story-card small {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #777;
+  padding-left: 10px;
+}
+
+.story-card p {
+  font-size: 1em;
+  color: #333;
+  padding-left: 10px;
+  overflow: hidden; /* Ensures content doesn't overflow */
+  text-overflow: ellipsis; /* Adds an ellipsis (...) at the end if the text overflows */
+  display: -webkit-box; /* Required for line clamping */
+  -webkit-line-clamp: 1; /* Limits the text to 1 line */
+  -webkit-box-orient: vertical; /* Specifies the box orientation for the clamp */
+}
+
+.story-card:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .story-card {
+    max-width: 45%; /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .story-card {
+    max-width: 100%; /* 1 card per row on small screens */
+  }
+}
