@@ -11,7 +11,7 @@ function Register() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://recipe-sharing-platform-yjed.onrender.com/auth/register", {
+    const response = await fetch("https://travel-story-backend-0vwr.onrender.com/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",

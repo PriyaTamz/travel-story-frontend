@@ -26,7 +26,7 @@ const CreateStory = () => {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('https://travel-story-backend-0vwr.onrender.com/stories/story', formData, {
+      const response = await axios.post('https://travel-story-backend-0vwr.onrender.com/stories/story', formData, { 
         headers: {
           'Content-Type': 'multipart/form-data',
         },
